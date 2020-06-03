@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('lang/{lang}','LangController@changeLang')->name('lang');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
