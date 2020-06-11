@@ -14,6 +14,6 @@ class PostsController extends Controller
     {
         $post = Post::whereDate('created_at', '=', '2020-05-30')->get();
         //var_dump($post);
-        return view('posts', compact('post'));
+        return view('blog', compact('post'));
     }
 }
