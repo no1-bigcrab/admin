@@ -14,12 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout');
+    return view('layout.layout');
 });
 
-Route::get('posts','posts\PostsController@getAllPost')->name('posts');
+Route::get('posts', 'posts\PostsController@getAllPost')->name('posts');
+Route::get('about', 'about\AboutController@aboutIndex')->name('about');
+Route::get('booking', 'booking\BookingController@bookingIndex')->name('booking');
+Route::get('contact', 'contact\ContactController@contactIndex')->name('contact');
+Route::get('destination', 'destination\DestinationController@destinationIndex')->name('destination');
+Route::get('discount', 'discount\DiscountController@discountIndex')->name('discount');
 
-Route::get('lang/{lang}','LangController@changeLang')->name('lang');
+
+Route::get('lang/{lang}', 'LangController@changeLang')->name('lang');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

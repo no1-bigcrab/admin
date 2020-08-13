@@ -24,7 +24,7 @@
                 </li>
                 
                 <li class=""><a href="">Discount</a></li>
-                <li class=""><a href="">About</a></li>
+                <li class=""><a href="/about">About</a></li>
                 <li class=""><a href="">Blog</a></li>
                 
                 <li class=""><a href="">Contact</a></li>

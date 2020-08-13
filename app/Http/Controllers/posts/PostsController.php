@@ -9,11 +9,9 @@ use App\Models\Category;
 
 class PostsController extends Controller
 {
-    //
     function getAllPost()
     {
-        $post = Post::whereDate('created_at', '=', '2020-05-30')->get();
-        //var_dump($post);
-        return view('blog', compact('post'));
+        $post = Post::all();
+        return view('layout.blog', compact('post'));
     }
 }
