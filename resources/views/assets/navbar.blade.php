@@ -2,7 +2,7 @@
 
       <div class="container">
         <div class="row align-items-center">
-          
+
           <div class="col-6 col-xl-2">
             <h1 class="mb-0"><a href="" class="text-black h2 mb-0">Travelers</a></h1>
           </div>
@@ -10,11 +10,11 @@
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block" id="menu">
-                <li class="active">
-                  <a href="">Home</a>
+                <li class="{{ Request::path()==='/' ? 'active' : '' }}">
+                  <a href="/">Trang chủ</a>
                 </li>
-                <li class="has-children">
-                  <a href="">Destinations</a>
+                <li class="has-children {{ Request::path()==='destination' ? 'active' : '' }}">
+                  <a href="/destination">Điểm đến</a>
                   <ul class="dropdown">
                     <li><a href="#">Japan</a></li>
                     <li><a href="#">Europe</a></li>
@@ -22,13 +22,13 @@
                     <li><a href="#">France</a></li>
                   </ul>
                 </li>
-                
-                <li class=""><a href="">Discount</a></li>
-                <li class=""><a href="/about">About</a></li>
-                <li class=""><a href="">Blog</a></li>
-                
-                <li class=""><a href="">Contact</a></li>
-                <!-- <li><a href="booking.html">Book Online</a></li> -->
+
+                <li class="{{ Request::path()==='discount' ? 'active' : '' }}"><a href="/discount">Khuyến Mãi</a></li>
+                <li class="{{ Request::path()==='about' ? 'active' : '' }}"><a href="/about">Về Chúng Tôi</a></li>
+                <li class="{{ Request::path()==='blog' ? 'active' : '' }}"><a href="/blog">Blog</a></li>
+
+                <li class="{{ Request::path()==='contact' ? 'active' : '' }}"><a href="/contact">Liên Hệ</a></li>
+                <li class="{{ Request::path()==='booking' ? 'active' : '' }}"><a href="booking">Đặt Tour</a></li>
               </ul>
             </nav>
           </div>
@@ -48,7 +48,7 @@
                 <li>
                   <a href="#" class="pl-3 pr-3 text-black"><span class="icon-instagram"></span></a>
                 </li>
-                
+
               </ul>
             </div>
 
@@ -58,5 +58,5 @@
 
         </div>
       </div>
-      
+
     </header>

@@ -11,7 +11,7 @@ class PostsController extends Controller
 {
     function getAllPost()
     {
-        $post = Post::all();
+        $post = Post::orderBy('created_at', 'DESC')->paginate(6);
         return view('layout.blog', compact('post'));
     }
 }
